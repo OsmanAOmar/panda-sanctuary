@@ -50,7 +50,6 @@ button {
 img {
     width: 100%;
     height: 100%;
-    /* display: block; */
 }
 
 .wrapper {
@@ -92,15 +91,10 @@ header h1 {
     margin: 0;
 }
 
-/* .about .wrapper {
-    display: flex;
-    justify-content: space-between;
-} */
-
 .about ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .about li {
@@ -128,11 +122,8 @@ header h1 {
 }
 
 .about-container {
-    border: 1px solid black;
     padding: 15px;
     margin: 40px 0;
-    /* max-width: 1080px;
-    width: 90%; */
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -158,35 +149,21 @@ header h1 {
     color: white;
 }
 
-/* .about-pic {
-    margin-right: 40px;
-} */
+.about p {
+    color: black;
+}
+
 
 /* BLOG SECTION  */
 
 .blog {
     background: #213C28;
     color: white;
-    /* display: flex;
-    flex-wrap: wrap; */
 }
 
 .blog h2 {
     font-size: 1.75rem;
 }
-/* 
-.blog img {
-    width: 50%;
-    margin: 0;
-    padding: 0;
-} */
-
-/* .blog-text-left {
-    align-self: center;
-    height: 100%;
-    width: 50%;
-    padding: 50px 50px;
-} */
 
 .row {
     display: flex;
@@ -203,7 +180,6 @@ header h1 {
     align-items: center;
     justify-content: center;
     text-align: left;
-    border: 1px solid yellow;
 }
 
 .column .blog-text {
@@ -211,7 +187,28 @@ header h1 {
     margin: 50px;
 }
 
+.blog button {
+    background: white;
+    color: #213C28;
+}
+
+/* LOGOS */
 /* BOTTOM NAVIGATION  */
 /* CONTACT SECTION  */
 /* FOOTER  */
 /* MEDIA QUERIES  */
+
+/* portrait tablet and small desktops */
+@media (max-width: 980px) {
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
