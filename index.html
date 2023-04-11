@@ -19,7 +19,7 @@
     />
     <!-- CSS STYLESHEET-->
     <link rel="stylesheet" href="style.css" />
-    <title>Panda Sanctuary</title>
+    <title>🐼Panda Sanctuary</title>
   </head>
   <body>
     <!-- HEADER-->
@@ -79,9 +79,16 @@
           <div class="about-text">
             <h2>More about our park</h2>
             <p>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quisquam magnam, ipsa nemo reiciendis laudantium sapiente beatae et velit voluptate eius quidem autem dolorem suscipit voluptatem perspiciatis nesciunt sint similique. Ex delectus et expedita sit repudiandae dolorum? Ex quasi eius numquam sint. Quaerat fugiat et pariatur illum quas ipsum perferendis minima hic. Eius dolorum minima placeat? Hic officia vitae alias ab ad reiciendis harum sapiente, quasi provident voluptatibus iure dignissimos voluptates atque, consequuntur aliquid voluptatum, tempora mollitia quae quod architecto laborum nostrum itaque? Quae ipsum dolore, sint ea et aperiam, facere temporibus blanditiis repellendus totam non officia odio praesentium incidunt aliquam expedita quos hic provident, excepturi distinctio itaque animi. Quo exercitationem magnam sint enim doloribus ipsam aperiam ea omnis. Quas dolorem dolorum dolores nisi reprehenderit ullam, autem nemo alias ipsa incidunt consequuntur repudiandae. Aliquid facilis in veritatis quam quae quidem deleniti harum aut suscipit, omnis numquam, natus non, quo beatae.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quisquam magnam, ipsa nemo reiciendis laudantium sapiente beatae et velit voluptate eius quidem autem dolorem suscipit voluptatem perspiciatis nesciunt sint similique. Ex delectus et expedita sit repudiandae dolorum? Ex quasi eius numquam sint. Quaerat fugiat et pariatur illum quas ipsum perferendis minima hic. Eius dolorum minima placeat? Hic officia vitae alias ab ad reiciendis harum sapiente, quasi provident voluptatibus iure dignissimos voluptates atque, consequuntur aliquid voluptatum, tempora mollitia quae quod architecto laborum nostrum itaque? Quae ipsum dolore, sint ea et aperiam, facere temporibus blanditiis repellendus totam non officia odio praesentium incidunt aliquam expedita quos hic provident, excepturi distinctio itaque animi. Quo exercitationem magnam sint enim doloribus ipsam aperiam ea omnis. Quas dolorem dolorum dolores nisi reprehenderit ullam, autem nemo alias ipsa incidunt consequuntur repudiandae. Aliquid facilis in veritatis quam quae quidem deleniti harum aut suscipit, omnis numquam, natus non, quo beatae.
             </p>
-            <button submit="#">read more</button>
+            <button class="open-button">read more</button>
+            <dialog class="modal" id="modal" >
+              <h2>Even MORE About Our Park!</h2>
+              <p>This nifty pop-up boxed is brought to you by JavaScript via Modal!</p>
+              <p>Parks and Rec is to The Office as Unbreakable Kimmy Schmidt is to 30 Rock. A pale comparison.</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur quas nisi doloremque explicabo facere deleniti similique. Modi corrupti nam atque?</p>
+              <button class="close-button">Close</button>
+            </dialog>
           </div>
         </div>
       </div>
@@ -189,5 +196,18 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quisquam magnam, 
       </footer>
     </main>
     <!-- FOOTER -->
+    <!-- JavaScript -->
+    <script>
+      const modal = document.querySelector('.modal')
+      const openModal = document.querySelector('.open-button');
+      const closeModal = document.querySelector('.close-button')
+
+      openModal.addEventListener('click', () => {
+        modal.showModal()//Allows to escape via esc button
+      })
+      closeModal.addEventListener('click', () => {
+        modal.close()
+      })
+    </script>
   </body>
 </html>
