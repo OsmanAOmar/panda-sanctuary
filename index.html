@@ -152,12 +152,13 @@
         <div class="wrapper">
           <!-- FORM -->
           <div>
-            <form action="#" method="#" class="myForm" name="myForm">
+            <div id="error"></div>
+            <form action="#" method="GET" class="myForm" name="myForm" id="form">
               <label for="email">
                 <h3>Stay updated</h3>
                 <p>Subscribe to our newsletter to stay updated.</p>
               </label>
-              <input type="email" placeholder="email address" />
+              <input id="email" type="email" placeholder="email address" />
               <button type="submit">subscribe</button>
             </form>
           </div>
@@ -198,6 +199,24 @@
     <!-- FOOTER -->
     <!-- JavaScript -->
     <script>
+      const email = document.getElementById('email')
+      const form = document.getElementById('form')
+      const errorElement = document.getElementById('error')
+
+      form.addEventListener('submit', (e) => {
+        let messages = []
+        //If submitted but form is blank, it will tell us email is needed
+        if (email.value === '') {
+          messages.push('email needed')
+        }
+
+        if (messages.length > 0){
+        e.preventDefault()//prevents error, no refresh
+          errorElement.innerText = messages.join('Thank you!')
+
+        }
+      })
+
       const modal = document.querySelector('.modal')
       const openModal = document.querySelector('.open-button');
       const closeModal = document.querySelector('.close-button')
